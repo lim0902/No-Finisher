@@ -1,7 +1,7 @@
 local active = false
 lib.onCache('weapon', function(value)
-    if not value then return end   -- no weapon equipped, nothing to do
-    if active then return end      -- already running, don't stack threads
+    if not value then return end
+    if active then return end
     active = true
 
     CreateThread(function()
